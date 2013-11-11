@@ -1,12 +1,14 @@
 // Normally mainpage styles
 $blue: #25b0ed
+$yellow: #ffd904
 body
 	font-size: 13px 
 	line-height: 1.4
 	background: #252525
 	+normal
+	overflow: hidden
 a
-	color: $blue
+	color: $yellow
 .l-container
 	position: relative
 	width: 940px 
@@ -16,11 +18,37 @@ a
 .footer__in
 	@extend .out
 
-.header
-	height: 52px 
+.l-header
 	position: relative
+	background: $yellow
+	&:before
+		content: ""
+		position: absolute
+		top: 0
+		bottom: 0
+		left: 100%
+		width: 2000em
+		background: $yellow
+	&:after
+		content: ""
+		position: absolute
+		top: 0
+		bottom: 0
+		right: 100%
+		width: 2000em
+		background: $yellow 	   
+.header
+	height: 57px 
+	position: relative
+	&:after
+		content: ""
+		position: absolute
+		bottom: -1px
+		height: 1px
+		width: 100%
+		background: #464646   
 	.header__logo
-		+s(goprolivelogo)
+		+s(logo)
 		position: absolute
 		left: 0 
 		top: 16px 
@@ -37,23 +65,24 @@ a
 		float: left
 	&.is-active
 		.nav__link
-			color: #fff 
+			color: #000
+			+opacity(1) 
 			&:before
 				content: ""
 				position: absolute
-				top: 0
+				bottom: -6px
 				height: 4px  
 				width: 100% 
-				background: #3AB2E9
-				+box-shadow(0 0 10px rgba(37,176,237,.75))
+				background: #fff
 .nav__link
 	display: block
 	padding-top: 18px
 	font-size: 18px 
 	line-height: 1 
-	font-weight: 100 
+	font-weight: 300 
 	text-decoration: none
-	color: #3AB2E9
+	color: #000
+	+opacity(.66)
 	text-transform: uppercase 
 		
 .mainvideo
@@ -174,7 +203,7 @@ a
 		padding-top: 28px 
 	.footer__pic
 		position: absolute
-		top: -112px 
+		top: -97px 
 		left: 0
 	.footer__head
 		position: absolute
@@ -193,12 +222,12 @@ a
 	.footer__what
 		font-size: 18px 
 		color: #999999
-		font-weight: 100
+		font-weight: 300
 		margin-bottom: 90px   
 .subscribe
 	h3
 		font-size: 24px 
-		font-weight: 100 
+		font-weight: 300 
 	p
 		font-size: 14px 
 		font-weight: 200
@@ -208,17 +237,17 @@ a
 		border-radius: 4px
 		border: none
 		font-size: 24px 
-		font-weight: 100 
+		font-weight: 200 
 		padding: 8px   
 		width: 442px 
 		+placeholder-color(#fff)
 		&:-moz-placeholder
-			font-weight: 100 
+			font-weight: 200 
 		&::-webkit-input-placeholder
-			font-weight: 100 
+			font-weight: 200 
 	.subscribe__submit
 		font-size: 18px 
-		color: #25b0ed
+		color: $yellow
 		background: transparent
 		text-transform: uppercase  
 		border: none
@@ -227,6 +256,7 @@ a
 		
 .title
 	+clr
+	padding-top: 15px 
 	.h2
 		float: left
 	.title__right
