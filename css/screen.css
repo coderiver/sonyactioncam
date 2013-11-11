@@ -41,7 +41,7 @@ a { color: #ffd904; }
 .nav__item.is-active .nav__link { color: black; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100); opacity: 1; }
 .nav__item.is-active .nav__link:before { content: ""; position: absolute; bottom: -6px; height: 4px; width: 100%; background: white; }
 
-.nav__link { display: block; padding-top: 18px; font-size: 18px; line-height: 1; font-weight: 300; text-decoration: none; color: black; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=66); opacity: 0.66; text-transform: uppercase; }
+.nav__link { display: block; padding-top: 14px; font-size: 18px; line-height: 1; font-weight: 300; text-decoration: none; color: black; filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=66); opacity: 0.66; text-transform: uppercase; }
 
 .mainvideo { border-bottom: 1px solid #464646; margin-bottom: 16px; }
 .mainvideo .mainvideo__video { position: relative; -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.6); -moz-box-shadow: 0 0 20px rgba(0, 0, 0, 0.6); box-shadow: 0 0 20px rgba(0, 0, 0, 0.6); }
