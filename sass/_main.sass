@@ -1,0 +1,271 @@
+// Normally mainpage styles
+$blue: #25b0ed
+body
+	font-size: 13px 
+	line-height: 1.4
+	background: #252525
+	+normal
+a
+	color: $blue
+.l-container
+	position: relative
+	width: 940px 
+	margin: 0 auto
+.out
+	position: relative
+.footer__in
+	@extend .out
+
+.header
+	height: 52px 
+	position: relative
+	.header__logo
+		+s(goprolivelogo)
+		position: absolute
+		left: 0 
+		top: 16px 
+		text-indent: -1983em
+		overflow: hidden 
+.nav
+	=clr
+	float: right
+	width: 520px
+.nav__item
+	position: relative
+	float: right
+	&:first-child
+		float: left
+	&.is-active
+		.nav__link
+			color: #fff 
+			&:before
+				content: ""
+				position: absolute
+				top: 0
+				height: 4px  
+				width: 100% 
+				background: #3AB2E9
+				+box-shadow(0 0 10px rgba(37,176,237,.75))
+.nav__link
+	display: block
+	padding-top: 18px
+	font-size: 18px 
+	line-height: 1 
+	font-weight: 100 
+	text-decoration: none
+	color: #3AB2E9
+	text-transform: uppercase 
+		
+.mainvideo
+	border-bottom: 1px solid #464646 
+	margin-bottom: 16px 
+	.mainvideo__video
+		position: relative
+		+box-shadow(0 0 20px rgba(0,0,0,.6))
+		img
+			display: block
+		.mainvideo__play
+			position: absolute
+			top: 50%
+			left: 50%  
+			+s(mainvideoplay)
+			cursor: pointer
+			margin-top: -(140px/2)
+			margin-left: -(137px/2)
+			+transition(all .2s ease-in-out)
+			&:hover
+				left: 51%
+	.mainvideo__bottom
+		overflow: hidden
+		padding-top: 9px 
+		padding-bottom: 12px 
+	.mainvideo__meta
+		float: left
+		font-size: 13px 
+		color: #999999 
+		font-weight: 200 
+		a
+			text-decoration: none
+		img,span
+			vertical-align: middle
+		img
+			margin-right: 8px 
+		strong
+			font-weight: 200 
+	.mainvideo__started
+		color: #fff 
+		font-size: 24px 
+		font-weight: 100 
+		float: right
+		line-height: 1 
+		padding-top: 2px 
+	.mainvideo__location
+		&:before
+			content: ' '
+			display: inline-block
+			+s(location)
+			margin-right: 2px 
+			position: relative
+			top: 1px 
+			margin-left: 2px 
+.h2
+	font-weight: 200
+	font-size: 18px  
+	color: #fff 
+	text-transform: uppercase
+	margin-bottom: 16px 
+	span
+		color: $blue 
+
+.videos
+	overflow: hidden
+	font-size: 0 
+// 32+2+32+2+32
+.video
+	width: 300px 
+	display: inline-block
+	margin: 0 0 18px 18px 
+	font-size: 13px 
+	text-decoration: none
+	.video__img
+		display: block 
+	&:first-child, &.video_first
+		margin-left: 0 
+	.video__meta
+		background: #000000
+		padding: 5px  
+		overflow: hidden
+		position: relative
+		.video__user
+			*
+				vertical-align: middle
+			img
+				margin-right: 7px 
+	.video__started
+		position: absolute
+		right: 0
+		top: 0 
+		line-height: 40px 
+		height: 40px  
+		right: 12px 
+		font-size: 13px 
+		color: #999 
+		padding-right: 28px 
+		.video__play
+			content: ' '
+			+s(video__play)
+			right: 0
+			position: absolute
+			top: 50%
+			margin-top: -7px   
+				
+
+
+.footer
+	background: #000000 
+	margin-top: 171px 
+	border-top: 1px solid #383838 
+	color: #fff 
+	.footer__in
+		padding-left: 243px 
+		position: relative
+		width: 940px - 243px 
+		min-height: 400px - 28px 
+		padding-top: 28px 
+	.footer__pic
+		position: absolute
+		top: -112px 
+		left: 0
+	.footer__head
+		position: absolute
+		top: -45px 
+		left: 243px 
+		+s(footer__biglogo)
+		text-indent: -1983em 
+		overflow: hidden
+	.footer__content
+		width: 462px 
+	.footer__icon
+		position: absolute
+		bottom: 72px 
+		right: 0
+		+s(footer__icon) 
+	.footer__what
+		font-size: 18px 
+		color: #999999
+		font-weight: 100
+		margin-bottom: 90px   
+.subscribe
+	h3
+		font-size: 24px 
+		font-weight: 100 
+	p
+		font-size: 14px 
+		font-weight: 200
+		margin-bottom: 15px 
+	.subscribe__email
+		background: #555555
+		border-radius: 4px
+		border: none
+		font-size: 24px 
+		font-weight: 100 
+		padding: 8px   
+		width: 442px 
+		+placeholder-color(#fff)
+		&:-moz-placeholder
+			font-weight: 100 
+		&::-webkit-input-placeholder
+			font-weight: 100 
+	.subscribe__submit
+		font-size: 18px 
+		color: #25b0ed
+		background: transparent
+		text-transform: uppercase  
+		border: none
+		font-weight: 100  
+		margin-top: 10px 
+		
+.title
+	+clr
+	.h2
+		float: left
+	.title__right
+		float: right
+
+.search-input
+	width: 380px
+.input
+	display: block
+	padding: 0 6px 
+	width: 100%
+	height: 24px
+	background: #555 
+	+box-sizing(border-box)
+	border-radius: 2px
+	font-size: 13px
+	+normal
+	+placeholder
+		color: #252525
+
+.overlay
+	position: absolute
+	top: 0
+	bottom: -115px
+	right: 0
+	left: 0
+	z-index: 1000
+	background: rgba(0,0,0,.8) 
+.popup
+	position: absolute
+	left: 50%
+	top: 115px
+	margin-left: -470px
+	width: 940px
+	z-index: 2000
+.popup__close
+	position: absolute
+	top: 1px
+	right: -38px
+	+s(close)
+	&:active
+		margin-top: 1px
