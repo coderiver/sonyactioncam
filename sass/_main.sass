@@ -6,7 +6,6 @@ body
 	line-height: 1.4
 	background: #252525
 	+normal
-	overflow: hidden
 a
 	color: $yellow
 .l-container
@@ -15,12 +14,14 @@ a
 	margin: 0 auto
 .out
 	position: relative
+	overflow: hidden
 .footer__in
-	@extend .out
+	position: relative
 
 .l-header
 	position: relative
 	background: $yellow
+	z-index: 200 
 	&:before
 		content: ""
 		position: absolute

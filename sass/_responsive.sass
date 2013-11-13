@@ -1,0 +1,119 @@
+		
+.l-container
+	+r
+		width: auto 
+		padding: 0 10px 
+.nav
+	width: 50%
+	li
+		a
+			+r(step3)
+				font-size: 12px 
+	li:first-child
+		position: relative
+		left: -30px 
+		+r(step2)
+			float: left
+			left: 0 
+			
+.mainvideo
+	.mainvideo__video
+		img
+			+r
+				width: 100%
+				display: block 
+	.mainvideo__started
+		+r(step2)
+			font-size: 14px 
+			float: none
+			padding-top: 4px 
+			clear: both
+.videos
+	.video
+		+r
+			width: 32%
+			margin-left: 1%
+		+r(step2)
+			width: auto 
+			display: block
+		&:first-child
+			margin-left: 0 
+	.video__img
+		+r
+			width: 100%
+			display: block
+	.video__user
+		span
+			+r(step12)
+				display: none
+			+r(step2)
+				display: inline
+//footer
+.footer
+	+r(step2)
+		margin-top: 60px 
+		padding-bottom: 20px 
+	.footer__icon
+		+r
+			display: none
+	.footer__in
+		+r
+			width: auto 
+			min-height: auto
+		+r(step12)
+			padding-left: 0 
+	.footer__pic
+		+r(step12)
+			width: 30%
+		+r(step2)
+			top: -20px 
+		+r(step3)
+			display: block
+			width: 30%
+			position: static
+			float: left
+			padding-right: 10px  
+		img
+			+r(step12)
+				display: block
+				width: 100% 
+	.footer__content
+		+r(step12)
+			margin-left: 32%
+			width: auto  
+		+r(step3)
+			margin-left: 0 
+	.footer__what
+		+r(step12)
+			margin-bottom: 5px 
+	.footer__head
+		+r(step12)
+			left: 32% 
+		+r(step3)
+			left: 0
+.subscribe
+	+r(step2)
+		clear: both
+		padding-top: 10px 
+	.subscribe__email
+		+r(step12) 
+			display: block
+			+box-sizing(border-box)
+			width: 100%
+.search-input
+	+r(step2)
+		width: 200px 
+	+r(step3)
+		width: 100px 
+.popup
+	position: absolute
+	left: 50%
+	top: 115px
+	margin-left: -470px
+	width: 940px
+	z-index: 2000	
+	+r
+		width: auto 
+		margin-left: 0
+		left: 10px  
+		right: 50px 

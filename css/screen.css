@@ -18,15 +18,17 @@ ul, ol { list-style-type: none; }
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) { * { -webkit-text-size-adjust: none; } }
 table { border-spacing: 0; border-collapse: collapse; width: 100%; table-layout: fixed; }
 
-body { font-size: 13px; line-height: 1.4; background: #252525; font-family: "Roboto", Arial, sans-serif; overflow: hidden; }
+body { font-size: 13px; line-height: 1.4; background: #252525; font-family: "Roboto", Arial, sans-serif; }
 
 a { color: #ffd904; }
 
 .l-container { position: relative; width: 940px; margin: 0 auto; }
 
-.out, .footer__in { position: relative; }
+.out { position: relative; overflow: hidden; }
 
-.l-header { position: relative; background: #ffd904; }
+.footer__in { position: relative; }
+
+.l-header { position: relative; background: #ffd904; z-index: 200; }
 .l-header:before { content: ""; position: absolute; top: 0; bottom: 0; left: 100%; width: 2000em; background: #ffd904; }
 .l-header:after { content: ""; position: absolute; top: 0; bottom: 0; right: 100%; width: 2000em; background: #ffd904; }
 
@@ -106,3 +108,43 @@ a { color: #ffd904; }
 
 .popup__close { position: absolute; top: 1px; right: -38px; background: url('../img/icons-s04311338c3.png') 0 -341px no-repeat; width: 15px; height: 14px; }
 .popup__close:active { margin-top: 1px; }
+
+@media only screen and (max-width: 960px) { .l-container { width: auto; padding: 0 10px; } }
+
+.nav { width: 50%; }
+@media only screen and (max-width: 400px) { .nav li a { font-size: 12px; } }
+.nav li:first-child { position: relative; left: -30px; }
+@media only screen and (max-width: 640px) { .nav li:first-child { float: left; left: 0; } }
+
+@media only screen and (max-width: 960px) { .mainvideo .mainvideo__video img { width: 100%; display: block; } }
+@media only screen and (max-width: 640px) { .mainvideo .mainvideo__started { font-size: 14px; float: none; padding-top: 4px; clear: both; } }
+
+@media only screen and (max-width: 960px) { .videos .video { width: 32%; margin-left: 1%; } }
+@media only screen and (max-width: 640px) { .videos .video { width: auto; display: block; } }
+.videos .video:first-child { margin-left: 0; }
+@media only screen and (max-width: 960px) { .videos .video__img { width: 100%; display: block; } }
+@media only screen and (max-width: 740px) { .videos .video__user span { display: none; } }
+@media only screen and (max-width: 640px) { .videos .video__user span { display: inline; } }
+
+@media only screen and (max-width: 640px) { .footer { margin-top: 60px; padding-bottom: 20px; } }
+@media only screen and (max-width: 960px) { .footer .footer__icon { display: none; } }
+@media only screen and (max-width: 960px) { .footer .footer__in { width: auto; min-height: auto; } }
+@media only screen and (max-width: 740px) { .footer .footer__in { padding-left: 0; } }
+@media only screen and (max-width: 740px) { .footer .footer__pic { width: 30%; } }
+@media only screen and (max-width: 640px) { .footer .footer__pic { top: -20px; } }
+@media only screen and (max-width: 400px) { .footer .footer__pic { display: block; width: 30%; position: static; float: left; padding-right: 10px; } }
+@media only screen and (max-width: 740px) { .footer .footer__pic img { display: block; width: 100%; } }
+@media only screen and (max-width: 740px) { .footer .footer__content { margin-left: 32%; width: auto; } }
+@media only screen and (max-width: 400px) { .footer .footer__content { margin-left: 0; } }
+@media only screen and (max-width: 740px) { .footer .footer__what { margin-bottom: 5px; } }
+@media only screen and (max-width: 740px) { .footer .footer__head { left: 32%; } }
+@media only screen and (max-width: 400px) { .footer .footer__head { left: 0; } }
+
+@media only screen and (max-width: 640px) { .subscribe { clear: both; padding-top: 10px; } }
+@media only screen and (max-width: 740px) { .subscribe .subscribe__email { display: block; -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; width: 100%; } }
+
+@media only screen and (max-width: 640px) { .search-input { width: 200px; } }
+@media only screen and (max-width: 400px) { .search-input { width: 100px; } }
+
+.popup { position: absolute; left: 50%; top: 115px; margin-left: -470px; width: 940px; z-index: 2000; }
+@media only screen and (max-width: 960px) { .popup { width: auto; margin-left: 0; left: 10px; right: 50px; } }
